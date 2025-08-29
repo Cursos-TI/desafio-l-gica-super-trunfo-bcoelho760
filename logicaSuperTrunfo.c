@@ -1,4 +1,5 @@
-#nclude <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main() {
 
@@ -85,47 +86,78 @@ int main() {
 
     printf("Registro completo \n");
 
-    if(população1 > população2){
-        printf("A carta 1 venceu no quesito: População\n");
-    } else{
-        printf("A carta 2 venceu no quesito: População\n");
-    }
+    int escolhaJogador;
 
-    if(área1 > área2){
-        printf("A carta 1 venceu no quesito: Área\n");
-    } else{
-        printf("A carta 2 venceu no quesito: Área\n");
-    }
+    printf("Escolha um atributo para comparar: \n");
+    printf("1. População \n");
+    printf("2. Área \n");
+    printf("3. PIB \n");
+    printf("4. Turismo \n");
+    printf("5. Densidade Populacional \n");
+    printf("6. PIB per capita \n");
+    printf("7. Super Poder \n");
+    scanf("%d", &escolhaJogador);
 
-    if(pib1 > pib2){
-        printf("A carta 1 venceu no quesito: PIB\n");
-    } else{
-        printf("A carta 2 venceu no quesito: PIB\n");
-    }
-
-    if(turismo1 > turismo2){
-        printf("A carta 1 venceu no quesito: Turismo\n");
-    } else{
-        printf("A carta 2 venceu no quesito: Turismo");
-    }
-
-    if(densidade1 < densidade2){
-        printf("A carta 1 venceu no quesito: Densidade Populacional\n");
-    } else{
-        printf("A carta 2 venceu no quesito: Densidade Populacional\n");
-    }
-
-    if(pibcapita1 > pibcapita2){
-        printf("A carta 1 venceu no quesito: PIB per capita\n");
-    } else{
-        printf("A carta 2 venceu no quesito PIB per capita\n");
-    }
-
-    if(superpoder1 > superpoder2){
-        printf("A carta 1 venceu no quesito: SuperPoder\n");
-    } else{
-        printf("A carta 2 venceu no quesito: SuperPoder\n");
-    }
+    switch(escolhaJogador)
+    {
+    case 1: if(população1 > população2)
+         printf("A carta 1 venceu no quesito: População \n");
+     else if (população2 > população1)
+ {
+        printf("A carta 2 venceu no quesito: População \n");
+ } else
+        printf("Houve um empate \n");
+    break;
+    case 2: if(área1 > área2)
+         printf("A carta 1 venceu no quesito: Área \n");
+     else if (área2 > área1)
+{
+        printf("A carta 2 venceu no quesito: Área \n");
+} else
+        printf("Houve um empate \n");
+    break;
+    case 3: if(pib1 > pib2)
+         printf("A carta 1 venceu no quesito: PIB \n");
+    else if (pib2 > pib1)
+{
+         printf("A carta 2 venceu no quesito: PIB \n");
+} else
+        printf("Houve um empate \n");
+        break;
+    case 4: if(turismo1 > turismo2)
+        printf("A carta 1 venceu no quesito: Turismo \n");
+    else if(turismo2 > turismo1)
+{
+        printf("A carta 2 venceu no quesito: Turismo \n");
+} else
+        printf("Houve um empate \n");
+        break;
+    case 5: if(densidade2 > densidade1)  
+        printf("A carta 1 venceu no quesito: Densidade Populacional \n");
+    else if(densidade1 > densidade2)
+{
+        printf("A carta 2 venceu no quesito: Densidade Populacional \n");
+} else
+        printf("Houve um empate \n");
+    break;
+    case 6: if(pibcapita1 > pibcapita2)
+        printf("A carta 1 venceu no quesito: PIB per capita \n");
+    else if(pibcapita2 > pibcapita1)
+{
+        printf("A carta 2 venceu no quesito: PIB per capita \n");
+} else
+        printf("Houve um empate \n");
+    break;
+     case 7: if(superpoder1 > superpoder2)
+        printf("A carta 1 venceu no quesito: Super Poder \n");
+    else if(superpoder2 > superpoder1)
+{
+        printf("A carta 2 venceu no quesito: Super Poder \n");
+} else
+        printf("Houve um empate \n");
+break;
+}
+   
 
     return 0;
 }
